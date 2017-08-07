@@ -62,10 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.startMe(v.getContext(),position+1);
             }
         });
-
+        //多次加载消耗内存，测试出现oom如何恢复现场
         temp = FileUtils.readByAssets(this,"countrys.json");
         temp1 = FileUtils.readByAssets(this,"countrys.json");
-        Log.e(TAG,temp);
     }
 
     @Override
